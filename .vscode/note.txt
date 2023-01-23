@@ -1,0 +1,74 @@
+ARRAY :-
+--------------------------------
+insert/delete/find an element 
+find the largest element
+find the second largest element
+check if the array is sorted or not
+Reverse an array
+remove duplicates from an array
+move zeros to end
+left rotate an array by one
+left rotate an array by d distance
+Leader in an array
+Maximum difference problem
+Frequencies in a sorted array
+Stock buy and sell problem
+Traping Rain water
+Maximum consicutive 1s
+Maximum subarray
+Longest even odd subarray
+Maximum circular sum subarray
+Majority element
+Minimum consicutive flips
+sliding window tecnique -- given an array of integer and number k, find the maximum sum of k consicutive elements.
+                           given an unsorted array of non negative integers find if there is a subarray with given sum.
+                           
+prefix sum tecnique(very important).-- find the equilibrium element
+                       find the maximum appearing element in their range
+                       check if the given array can be divided into three part with equal sum
+                       check if there is a subarray with zero sum
+                       find the Longest subarray with equal zeros and ones 
+
+
+HASHING :-(unordered set, set, map, unordered map, multiset, pair)
+find frequency of an element in an array
+count distinct element in an array
+intersection of two array
+union of two array
+pair with given sum in unsorted array
+subarray with zero sum
+longest subarray with given sum
+longest subarray with equal number of 0s and 1s
+longest common span with same sum in binary array
+longest consecutive subsequence 
+count distinct elementin every window
+more than n_k occurences
+more than n_k occurences(o(n))
+
+C++ STL
+
+STRING :-
+
+pallindrome check
+check if string is subsequence of other
+check for anagram
+leftmost repeating element
+leftmost non repeating element
+reverse word in a string
+overveiw of pattern searching
+naive pattern searching
+improved naive pattern searching for distinct
+Rabin Karp algorithm
+constructing longest proper prefix suffix array
+check if strings are rotations
+anagram 
+lexicographic rank of a string
+longest substring with distinct characters.
+
+essential mathematics
+bitwise in cpp
+2D array
+searching
+sorting
+
+

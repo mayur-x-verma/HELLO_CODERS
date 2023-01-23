@@ -1,0 +1,7 @@
+1 - about NAMESPACE:-
+2 - about STRUCT:-Use a struct when you need to store elements of different data types under one data type.
+-C++ structs are a value type rather than being a reference type. Use a struct if you don't intend to modify your data after creation.
+when should we use STRUCT instead of CLASS?
+-we can keep any type of data structure in out structure like array, integer, double etc.
+3 - about ARRAY:-
+4 - ITRATORS :- 

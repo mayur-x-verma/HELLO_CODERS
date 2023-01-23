@@ -1,0 +1,11 @@
+{
+    "files.autoSave": "afterDelay",
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "cmath": "cpp",
+        "string": "cpp",
+        "map": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
