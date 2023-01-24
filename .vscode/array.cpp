@@ -91,20 +91,24 @@ int slidingWindow(int arr[], int n, int k) // to find the sum of k consecutive e
         
     }
 }
-void rotateArray(int arr[], int n)
+void rotateArray(int arr[], int n, int d)
 {
-    // rotate by one
-    arr[0] = arr[n - 1];
-    for (int i = 1; i < n - 1; i++)
+    // rotate by d
+    vector<int> v(n);
+    for (int i = 0; i < n; i++)
     {
-        arr[i] = arr[i + 1];
+        insert
+        if((i+d)>n)
+        {
+
+        }
     }
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
     }
 }
-int prefixSum(int arr[], int n)
+int prefixSum(int arr[], int n)// to get things done in o(1)precompute the prefix array
 {
 }
 bool twoPointer(int arr[], int n) // there exists elements whose pair is equal to x
