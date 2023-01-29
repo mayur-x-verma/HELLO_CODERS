@@ -1,82 +1,84 @@
 
-Pseudo:
-// { Driver Code Starts
-//Initial Template for C++
 #include <bits/stdc++.h>
+typedef long long int ll;
 using namespace std;
 
-
- // } Driver Code Ends
-//User function Template for C++
-#define ll long long
-class Solution{
-  public:
-  
-  vector<ll>v1,ans;
-vector<int>vis;
-
-ll dfs(int x, vector<int>v[], vector<int>&val)
+ll maxcons1s(string s, ll n)
 {
-     vis[x]=1;
-     
-     vector<ll>tmp;
-     for(int i=0;i<=v[x].size();++i)
-     {
-         int child=v[x][i];
-         if(vis[child]==0)
-         {
-             v1[x]+=dfs(child,v,val);
-             tmp.push_back(v1[child]);
-         }
-     }
-     
-     sort(tmp.begin(), tmp.end());
-     if(tmp.size()==0) ans[x]=0;
-     else ans[x]=abs(tmp[0]-tmp.back());
-     
-     v1[x]+=val[x];
-     return v1[x];
-}
-  
-  vector<long long> differenceTree(int n,vector<int> &p,vector<int> &vals)
+  ll c = 0;
+  ll res = 0;
+  for (ll i = 0; i < n; i++)
   {
-    //code here
-     vector<int>v[n+2];
-  for(int i=1;i<p.size();++i)
-  {     v[i].push_back(p[i]-1);
-      v[p[i]-1].push_back(i);
+    if (s[i] == '0')
+    {
+      c = 0;
+    }
+    else
+    {
+      c++;
+      res = max(res, c);
+    }
   }
-  
-  ans.clear(); ans.resize(n+2,0);
-  vis.clear(); vis.resize(n+2,0);
-  v1.clear(); v1.resize(n+2,0);
-  dfs(0,v,vals);
-
-  while(ans.size()>n) ans.pop_back();
-  return ans;
-  }
-};
-
-
-// { Driver Code Starts.
-
-
+  return res;
+}
 int main()
 {
-  int t;
+  ll t;
   cin >> t;
-  while(t--)
+  while (t--)
   {
-    int n;
+    ll alskjf = 0; ll x = 0;
+    ll y = 0;
+    ll blskjf = 0;
+    ll n;
     cin >> n;
-    vector<int> p(n),vals(n);
-    for(int i = 0; i<n; i++)cin >> p[i];
-    for(int i = 0; i<n; i++)cin >> vals[i];
-    Solution obj;
-    vector<long long> ans = obj.differenceTree(n,p,vals);
-    for(long long i:ans)cout << i << " ";
-    cout << "\n";
-    
+    string s;
+    cin >> s;
+    if (s[0] == '0')
+    {
+      cout << maxcons1s(s, n) << endl;
+    }
+    else if (s[0] == '1' && s[n-1]=='0')
+    {
+      for (ll i = 1; i < n; i++)
+      {
+        x++;
+        if (s[i] == '0')
+        {
+          alskjf = x;
+          break;
+        }
+      }
+      cout<<alskjf + maxcons1s(s,n)<<endl;
+    }
+    else if(s[n-1]=='1' && s[0]=='1')
+    {
+       for (ll i = 1; i < n; i++)
+      {
+        x++;
+        if (s[i] == '0')
+        {
+          alskjf = x;
+          // cout<<alskjf<<endl;
+          break;
+        }
+         for (ll i = n-2; i >= 0; i--)
+      {
+        y++;
+        if (s[i] == '0')
+        {
+          blskjf = y;
+          // cout<<blskjf<<endl;
+          break;
+        }
+      }
+      }
+      if((alskjf+blskjf)>maxcons1s(s,n))
+      {
+        cout<<alskjf+blskjf<<endl;
+      }
+
+    }
   }
   return 0;
 }
