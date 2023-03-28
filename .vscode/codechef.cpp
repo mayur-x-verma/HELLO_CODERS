@@ -1,53 +1,24 @@
 #include <bits/stdc++.h>
-typedef long long int ll;
 using namespace std;
-ll binaryToDecimal(string str)
+
+int main()
 {
-    ll dec_num = 0;
-      ll power = 0 ;
-    ll n = str.length() ;
-   
-      for(ll i = n-1 ; i>=0 ; i--){
-      if(str[i] == '1'){
-        dec_num += (1<<power) ;
-      }
-      power++ ;
+  // your code goes here
+  int t;
+  cin >> t;
+  while (t--)
+  {
+    int a,b;
+    cin>>a>>b;
+    int x = (a*b);
+    if(x>500)
+    {
+      cout<<"NO"<<endl;
     }
-   
-    return dec_num;
-}
-int main() {
-	// your code goes here
-	ll t;
-	cin>>t;
-	while(t--){
-	    ll c = 0;
-	ll n;
-	cin>>n;
-	string s;
-	cin>>s;
-	if(binaryToDecimal(s)>=8){
-	for(ll i = 0;i<n;i++)
-	{
-	    if(s[i]=='1')
-	    {
-	        c++;
-	    }
-	}
-	if(c>3)
-	{
-	    cout<<"NO"<<endl;
-	}
-	else
-	
-	{
-	    cout<<"YES"<<endl;
-	}}
-	else 
-	{
-	    cout<<"NO"<<endl;
-	}
-	}
-	
-	return 0;
+    else
+    {
+      cout<<"YES"<<endl;
+    }
+  }
+  return 0;
 }

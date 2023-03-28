@@ -1,78 +1,49 @@
 #include <bits/stdc++.h>
 using namespace std;
-int binarySearch(int arr[], int n, int k)
-{
-    int mid;
-    int start = 0;
-    int end = n - 1;
-    while (arr[start] <= arr[end])
-    {
-        mid = (start + end) / 2;
-        if (k == arr[mid])
-            return mid;
-
-        if (k < arr[mid])
-        {
-            end = mid - 1;
-        }
-        else if (k > arr[mid])
-        {
-            start = mid + 1;
-        }
-    }
-}
-// int recursiveBs(int arr[], int n, int k,int mid,int start,int end)
+typedef long long int ll;
+// int prefixSum(vector<int>,int n)
 // {
-//     if (k == arr[mid])
-//         return mid;
-
-//     return if()
-// }
-// int twoPointers(int arr[], int n, int k)
-// {
-
-// }
-// int squareRoot(int n)
-// {
-
-// }
-// int searchInRotated(int arr[], int n, int k)
-// {
-
-// }
-// int count1s(bool arr[], int n) // if sorted array
-// {
-//     int start = 0;
-//     int end = n-1;
-//     int mid;
-//     while(arr[start]<arr[end])
-//     {
-//         mid = (start+end)/2;
-//         if(arr[mid]==1)
-//         {
-//             end = mid-1;
-//         }
-//         else
-//         {
-//             start = mid+1;
-//         }
-//     }
-// }
-// int findPeak(int arr[])
-// {
-
-// }
-// bool prac(int x, int y)
-// {
-//     return ((x < y) ? x = y : 1);
+//   int sum = 0;
+//   for(int i = 1;i<=n;i++)
+//   {
+//     sum+=v[i];
+//   }
+//   return sum;
 // }
 int main()
 {
-
-    // int start = 0;
-    // int end = 6;
-    // int mid = (start+end)/2;
-    int arr[7] = {10, 20, 33, 43, 56, 64, 110};
-    cout << binarySearch(arr, 7, 110);
-    return 0;
+  // your code goes here
+  ll t;
+  cin >> t;
+  while (t--)
+  {
+    
+    ll n;
+    cin>>n;
+    vector<ll> v;
+    for(ll i = 1;i<=n;i++)
+    {
+        v.push_back(i);
+    }
+    if(n%2!=0)
+    {
+      cout<<"-1"<<endl;
+    }
+    // for(ll i = 2;i<=n;i++)
+    // {
+    //   if(v[i]%2!=0)
+    //   {
+    //     swap(v[i],v[i+1]);
+    //   }
+    // }
+    for(auto it:v)
+    {
+      if(v[it]%2!=0)
+      {
+        swap(v[it],v[it+1]);
+      }
+      cout<<it<<" ";
+    }
+  }
+  return 0;
 }
